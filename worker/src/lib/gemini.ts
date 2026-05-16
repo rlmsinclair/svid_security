@@ -12,7 +12,7 @@ const VISION_PROMPT = `Describe this security camera frame in detail for a searc
 Use specific, searchable descriptors. Be concise but complete.`;
 
 export async function analyzeFrame(imageBuffer: Buffer): Promise<string> {
-  const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash-lite-preview-05-20' });
+  const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash-lite' });
 
   const result = await model.generateContent([
     VISION_PROMPT,
