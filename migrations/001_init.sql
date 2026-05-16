@@ -29,7 +29,7 @@ CREATE TABLE frames (
   video_timestamp_seconds FLOAT NOT NULL,
   storage_key TEXT NOT NULL,
   analysis TEXT,
-  embedding vector(768),
+  embedding vector(1536),
   analyzed_at TIMESTAMPTZ,
   embedded_at TIMESTAMPTZ,
   UNIQUE (video_id, frame_number)

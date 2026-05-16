@@ -21,7 +21,7 @@ const frameWorker = new Worker(
     await analyzeFrame(job);
     console.log(`Completed frame job ${job.id}`);
   },
-  { connection, concurrency: 5 }
+  { connection, concurrency: 1 }
 );
 
 videoWorker.on('failed', (job, err) => {
